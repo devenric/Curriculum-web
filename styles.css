@@ -1,0 +1,140 @@
+
+div a:nth-child8(1){
+        color: red;
+    }
+label input[type="checkbox"]{
+    color: green;
+}
+button:enabled{
+    color: green;
+}
+button:disabled{
+    color: red;
+}
+
+form:read-write{
+border: 20px yellow solid;
+}
+input:placeholder-shown{
+    background: #555;
+    border-radius: 2px;
+}
+input[type="search"]{
+    padding: 5px 10px;
+}
+input[type="search"]::before{
+    content: url('lupa.png');
+}
+input:in-range{
+    background-color: green;
+    color: white;    
+}
+input:out-of-range{
+background-color: red;
+color: white;
+}
+.div_right{
+    inline-size: 350px;
+    block-size: 200px;
+    padding: 25 10px;
+    border: 2px lightblue solid;
+    text-align: right;
+    margin: 30px;
+}
+.div_left{
+    inline-size: 350px;
+    block-size: 200px;
+    padding: 25 10px;
+    border: 2px lightblue solid;
+    text-align: left;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+            .flex div{
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+            }
+            .sobre_mi{
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;}
+            .formacion{
+                    inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+                text-align: left;
+                }
+}
+    .textarea{
+    inline-size: 300px;
+    block-size: 400px;
+    position: relative;
+    display: inline-block;
+
+                & textarea::spelling-error{
+                background-color: darkred;
+                color: red;
+                }
+            .textarea:hover::after{
+                content: "aprende a escribir LOL";
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background: white;
+                color: black;
+                white-space: nowrap;
+                border: 1px solid black;
+                padding: 5px;
+            }
+    }
+    .alinear{
+                display: block;
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+                text-align: center;
+                align-content: center;
+                }
+.caja_grande{
+    display: flex;
+    flex-flow: row nowrap; /*propiedad abreviada */
+    gap: 20px;
+    justify-content: space-evenly;
+    background: red;
+
+    
+
+
+}
+.minicaja{
+    display: flex;
+    inline-size: 150px;
+    block-size: 40px;
+    border: 1px solid black;
+    background: blue;
+    align-items: center; /*alinear verticalmente*/
+    justify-content: center; /*alinear horizontalmente*/
+    align-content: center; /*multilinea, asi que no funciona*/;
+    flex: 0 1 15%; /*flex-grow, flex-shrink, flex-basis*/
+    transition: flex 0,5s ;
+}
+.minicaja:hover{
+    flex: 1 1 10%;
+}
+.texto{
+text-align: center;
+color: white;
+font-size: 30px;
+}
