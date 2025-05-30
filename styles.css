@@ -113,10 +113,6 @@ color: white;
     gap: 20px;
     justify-content: space-evenly;
     background: red;
-
-    
-
-
 }
 .minicaja{
     display: flex;
@@ -128,7 +124,7 @@ color: white;
     justify-content: center; /*alinear horizontalmente*/
     align-content: center; /*multilinea, asi que no funciona*/;
     flex: 0 1 15%; /*flex-grow, flex-shrink, flex-basis*/
-    transition: flex 0,5s ;
+    transition: all 0.3s ;
 }
 .minicaja:hover{
     flex: 1 1 10%;
