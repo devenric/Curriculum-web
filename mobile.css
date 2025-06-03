@@ -1,0 +1,189 @@
+.caja_header{
+                display: flex;
+                flex-flow: row; /*propiedad abreviada */
+                justify-content: space-evenly;
+                background: white;
+                width: 600px;   
+                height: 20vh;
+}
+.minicaja{
+                display: flex;
+                block-size: 50px;
+                border: 1px solid black;
+                background: rgb(238, 238, 238);
+                align-items: center; /*alinear verticalmente*/
+                justify-content: center; /*alinear horizontalmente*/
+                flex: 0 1 15%; /*flex-grow, flex-shrink, flex-basis*/
+                transition: all 0.3s ;
+}
+
+@media (max-width: 767px){
+    .minicaja:active{
+        background-color: rgb(0, 0, 0);
+        flex: 2 1 80%;
+    }
+}
+.texto{
+                text-align: center;
+                color: black;
+                font-size: 1rem;
+                }
+
+.introduccion{
+                    width: clamp(100px , 50%, 500px); /* Ancho mínimo, máximo y preferido */
+                }
+.caja_contenido{
+    display: flex;
+    flex-flow: column wrap; /*propiedad abreviada */
+    gap: 20px;
+    justify-content: space-evenly;
+    background: white;
+    margin-top: 150px;
+    block-size: 600px;
+    inline-size: 1000px;
+    padding: 20px;}
+.minicaja_contenido{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    inline-size: 200px;
+    block-size: 40px;
+    border: 1px solid black;
+    background: rgb(238, 238, 238);
+    align-items: stretch; /*alinear verticalmente*/
+    justify-content: center; /*alinear horizontalmente*/
+    align-content: start; /*multilinea, asi que no funciona*/;
+
+    flex: 0 1 10%; /*flex-grow, flex-shrink, flex-basis*/
+    transition: all 0.3s ;
+    overflow: visible;
+    height: auto;
+}
+.minicaja_contenido .información{
+    position: absolute;
+    left: 100%; /* Aparece a la derecha del contenedor */
+    top: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid #ccc;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px); /* Efecto de desplazamiento */
+    transition: opacity 0.3s, transform 0.3s;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    white-space: normal;
+}
+.minicaja_contenido:hover .información{
+    opacity: 1;
+    transform: translateX(10); /* Vuelve a la posición original */
+    pointer-events: auto; /* Permite la interacción */
+}
+
+.información{
+    position: relative;
+width: 800px;
+height: 300px;
+text-align: start;
+border-radius: 25px 25px 25px 25px;
+}
+.información .barra-navegador{
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+background-color: whitesmoke;
+width: 100%;
+height: 15%;
+border-radius: 25px 25px 0 0;
+
+}
+.textoapartado{
+    font-size: 1.5rem;
+text-align: center;}
+.botones{
+    display: flex;
+    margin-left: 10px;
+    gap: 6px;
+    width: 200px;
+    height: 20px;
+    border-radius: 50%;
+}
+.boton1{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: red;}
+.boton2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: orange;}
+.boton3{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: green;}
+
+.container{
+    display: grid;
+    grid-template: "header header header header" 15vh
+                         "body body body body" 70vh
+                         "footer footer footer footer" 15vh / 1fr 1fr 1fr 1fr;}
+    /* repeat(auto-fill, minmax(50px, 100px)) ; */
+.item1{
+grid-area: header;
+background: rgb(238, 238, 238);
+border: 1px solid black;
+}
+.item2{
+grid-area: body;
+background: rgb(202, 212, 202);
+height:100%;
+}
+.item3{
+grid-area: footer;
+background: rgb(238, 238, 238);
+border: 1px solid black;
+}
+.subgrid{
+    display: grid;
+    grid-template:  
+    "item1 item2 item3"/ 1fr 1fr 1fr;
+justify-content: stretch;
+align-content: stretch;
+place-items: center;
+width: 100%;
+height: 100%;
+gap: 10px;
+}
+
+.subitem1{
+    grid-area: item1;
+    background: rgb(119, 119, 113);
+}
+.subitem2{
+    grid-area: item2;
+    background: rgb(119, 119, 113);
+}
+.subitem3{
+    grid-area: item3;
+    background: rgb(119, 119, 113);
+}
+.subitem1, .subitem2, .subitem3 {
+    border: 1px solid black;
+width: 400px;
+height: 400px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    object-position: left;
+        transition: transform 0.5s ease; /* Transición suave */
+}
+img:hover{
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
+
+}
