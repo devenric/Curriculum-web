@@ -127,60 +127,25 @@ text-align: center;}
     background: green;}
 
 .container{
-    display: grid;
-    grid-template: "header header header header" 15vh
-                         "body body body body" 70vh
-                         "footer footer footer footer" 15vh / 1fr 1fr 1fr 1fr;}
-    /* repeat(auto-fill, minmax(50px, 100px)) ; */
-.item1{
-grid-area: header;
-background: rgb(238, 238, 238);
-border: 1px solid black;
-}
-.item2{
-grid-area: body;
-background: rgb(202, 212, 202);
-height:100%;
-}
-.item3{
-grid-area: footer;
-background: rgb(238, 238, 238);
-border: 1px solid black;
-}
-.subgrid{
-    display: grid;
-    grid-template:  
-    "item1 item2 item3"/ 1fr 1fr 1fr;
-justify-content: stretch;
-align-content: stretch;
-place-items: center;
-width: 100%;
-height: 100%;
-gap: 10px;
-}
-
-.subitem1{
-    grid-area: item1;
-    background: rgb(119, 119, 113);
-}
-.subitem2{
-    grid-area: item2;
-    background: rgb(119, 119, 113);
-}
-.subitem3{
-    grid-area: item3;
-    background: rgb(119, 119, 113);
-}
-.subitem1, .subitem2, .subitem3 {
-    border: 1px solid black;
-width: 400px;
-height: 400px;
-}
-img{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+align-items: start}
+.item1, .item2, .item3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    object-position: left;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+img{
+    width: 250px;
+    height: 250px;
+        object-position: left;
         transition: transform 0.5s ease; /* Transición suave */
 }
 img:hover{
