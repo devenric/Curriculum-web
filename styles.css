@@ -250,3 +250,120 @@ img:hover{
     transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
 
 }
+.nextpages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.itemfoot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+/* Contacto - Estilo de tarjeta centrada tipo v0.dev */
+
+.contacto-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    padding: 40px 0;
+}
+
+.contacto-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.03);
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+}
+
+.contacto-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #22223b;
+    text-align: center;
+}
+
+.contacto-card p {
+    color: #4a4e69;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.contacto-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contacto-form label {
+    font-size: 1rem;
+    color: #22223b;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #c9c9c9;
+    border-radius: 8px;
+    background: #f4f4f5;
+    font-size: 1rem;
+    color: #22223b;
+    transition: border 0.2s;
+    resize: none;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #4f8cff;
+    outline: none;
+    background: #fff;
+}
+
+.contacto-form button {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contacto-form button:hover,
+.contacto-form button:focus {
+    background: #2563eb;
+}
+
+@media (max-width: 500px) {
+    .contacto-card {
+        padding: 24px 8px;
+        max-width: 95vw;
+    }
+}
