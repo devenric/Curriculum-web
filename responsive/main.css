@@ -1,0 +1,25 @@
+.container{
+    display: grid;
+    grid-template: "header header header" 15vh
+                    "content content content" 75vh
+                    "footer footer footer" 15vh / 1fr 1fr 1fr;
+
+}
+.header {
+    grid-area: header;
+    background: #f0f0f0;
+    width: clamp(100px, 100vw, 1200px);
+    padding: 20px;
+    text-align: center;
+}
+.content{
+    grid-area: content;
+    background: red;
+    width: clamp(100px, 100vw, 1200px);
+    padding: 20px;
+    text-align: center}
+.footer{
+grid-area: footer;
+width: clamp(100px, 100vw, 1200px);
+background: black;
+    }
