@@ -1,0 +1,369 @@
+
+div a:nth-child8(1){
+        color: red;
+    }
+label input[type="checkbox"]{
+    color: green;
+}
+button:enabled{
+    color: green;
+}
+button:disabled{
+    color: red; 
+}
+
+form:read-write{
+border: 20px yellow solid;
+}
+input:placeholder-shown{
+    background: #555;
+    border-radius: 2px;
+}
+input[type="search"]{
+    padding: 5px 10px;
+}
+input[type="search"]::before{
+    content: url('lupa.png');
+}
+input:in-range{
+    background-color: green;
+    color: white;    
+}
+input:out-of-range{
+background-color: red;
+color: white;
+}
+.div_right{
+    inline-size: 350px;
+    block-size: 200px;
+    padding: 25 10px;
+    border: 2px lightblue solid;
+    text-align: right;
+    margin: 30px;
+}
+.div_left{
+    inline-size: 350px;
+    block-size: 200px;
+    padding: 25 10px;
+    border: 2px lightblue solid;
+    text-align: left;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+            .flex div{
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+            }
+            .sobre_mi{
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;}
+            .formacion{
+                    inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+                text-align: left;
+                }
+}
+    .textarea{
+    inline-size: 300px;
+    block-size: 400px;
+    position: relative;
+    display: inline-block;
+
+                & textarea::spelling-error{
+                background-color: darkred;
+                color: red;
+                }
+            .textarea:hover::after{
+                content: "aprende a escribir LOL";
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background: white;
+                color: black;
+                white-space: nowrap;
+                border: 1px solid black;
+                padding: 5px;
+            }
+    }
+    .alinear{
+                display: block;
+                inline-size: 300px;
+                block-size: 400px;
+                background-color: #e6e1e1;
+                border: 2px black solid;
+                margin-top: 100px;
+                text-align: center;
+                align-content: center;
+                }
+.caja_header{
+                display: flex;
+                flex-flow: row nowrap; /*propiedad abreviada */
+                gap: 20px;
+                justify-content: space-evenly;
+                background: white;
+}
+.minicaja{
+                display: flex;
+                inline-size: 200px;
+                block-size: 40px;
+                border: 1px solid black;
+                background: rgb(238, 238, 238);
+                align-items: center; /*alinear verticalmente*/
+                justify-content: center; /*alinear horizontalmente*/
+                align-content: center; /*multilinea, asi que no funciona*/;
+
+                flex: 0 1 15%; /*flex-grow, flex-shrink, flex-basis*/
+                transition: all 0.3s ;
+}
+.minicaja:hover{
+                flex: 1 1 10%;
+}
+.texto{
+                text-align: center;
+                color: black;
+                font-size: 30px;
+                }
+.caja_contenido{
+    display: flex;
+    flex-flow: column wrap; /*propiedad abreviada */
+    gap: 20px;
+    justify-content: space-evenly;
+    background: white;
+    margin-top: 150px;
+    block-size: 600px;
+    inline-size: 1000px;
+    padding: 20px;}
+.minicaja_contenido{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    inline-size: 200px;
+    block-size: 40px;
+    border: 1px solid black;
+    background: rgb(238, 238, 238);
+    align-items: stretch; /*alinear verticalmente*/
+    justify-content: center; /*alinear horizontalmente*/
+    align-content: start; /*multilinea, asi que no funciona*/;
+
+    flex: 0 1 10%; /*flex-grow, flex-shrink, flex-basis*/
+    transition: all 0.3s ;
+    overflow: visible;
+    height: auto;
+}
+.minicaja_contenido .información{
+    position: absolute;
+    left: 100%; /* Aparece a la derecha del contenedor */
+    top: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid #ccc;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px); /* Efecto de desplazamiento */
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 10;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    white-space: normal;
+}
+.minicaja_contenido:hover .información{
+    opacity: 1;
+    transform: translateX(0); /* Vuelve a la posición original */
+    pointer-events: auto; /* Permite la interacción */
+}
+
+.información{
+width: 800px;
+height: 300px;
+text-align: start;
+}
+.container{
+    display: grid;
+    grid-template: "header header header header" 15vh
+                         "body body body body" 70vh
+                         "footer footer footer footer" 15vh / 1fr 1fr 1fr 1fr;}
+    /* repeat(auto-fill, minmax(50px, 100px)) ; */
+.item1{
+grid-area: header;
+background: rgb(238, 238, 238);
+border: 1px solid black;
+}
+.item2{
+grid-area: body;
+background: rgb(202, 212, 202);
+height:100%;
+}
+.item3{
+grid-area: footer;
+background: rgb(238, 238, 238);
+border: 1px solid black;
+}
+.subgrid{
+    display: grid;
+    grid-template:  
+    "item1 item2 item3"/ 1fr 1fr 1fr;
+justify-content: stretch;
+align-content: stretch;
+place-items: center;
+width: 100%;
+height: 100%;
+gap: 10px;
+}
+
+.subitem1{
+    grid-area: item1;
+    background: rgb(119, 119, 113);
+}
+.subitem2{
+    grid-area: item2;
+    background: rgb(119, 119, 113);
+}
+.subitem3{
+    grid-area: item3;
+    background: rgb(119, 119, 113);
+}
+.subitem1, .subitem2, .subitem3 {
+    border: 1px solid black;
+width: 400px;
+height: 400px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    object-position: left;
+        transition: transform 0.5s ease; /* Transición suave */
+}
+img:hover{
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
+
+}
+.nextpages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.itemfoot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    margin: 10px;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+/* Contacto - Estilo de tarjeta centrada tipo v0.dev */
+
+.contacto-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    padding: 40px 0;
+}
+
+.contacto-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.03);
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+}
+
+.contacto-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #22223b;
+    text-align: center;
+}
+
+.contacto-card p {
+    color: #4a4e69;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+.contacto-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contacto-form label {
+    font-size: 1rem;
+    color: #22223b;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #c9c9c9;
+    border-radius: 8px;
+    background: #f4f4f5;
+    font-size: 1rem;
+    color: #22223b;
+    transition: border 0.2s;
+    resize: none;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #4f8cff;
+    outline: none;
+    background: #fff;
+}
+
+.contacto-form button {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.contacto-form button:hover,
+.contacto-form button:focus {
+    background: #2563eb;
+}
+
+@media (max-width: 500px) {
+    .contacto-card {
+        padding: 24px 8px;
+        max-width: 95vw;
+    }
+}
