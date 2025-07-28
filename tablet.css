@@ -54,7 +54,6 @@
     align-items: stretch; /*alinear verticalmente*/
     justify-content: center; /*alinear horizontalmente*/
     align-content: start; /*multilinea, asi que no funciona*/;
-
     flex: 0 1 10%; /*flex-grow, flex-shrink, flex-basis*/
     transition: all 0.3s ;
     overflow: visible;
