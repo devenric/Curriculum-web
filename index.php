@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="desktop.css">
     <link rel="stylesheet" href="tablet.css" media="(min-width:768px) and (max-width: 1024px)">
     <link rel="stylesheet" href="mobile.css" media="(max-width: 767px)">
+    <link rel="icon" href="favicon.ico" type="image">
 </head>
 
 <body>
